@@ -1,3 +1,4 @@
+const PORT = process.env.PORT || 9090;
 const express = require('express');
 const path = require('path');
 
@@ -27,4 +28,4 @@ io.on('connection', socket => {
     });
 })
 
-server.listen(9090);
+server.listen(PORT);

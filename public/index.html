@@ -19,7 +19,8 @@
     </form>
 
     <script type="text/javascript">
-        let socket = io('https://chat-gvn.herokuapp.com:9090/');
+        const PORT = process.env.PORT || 9090;
+        let socket = io(`https://chat-gvn.herokuapp.com:${PORT}/`);
 
         function renderMessage(message) {
             $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>:'+ message.message +'</div>');
