@@ -19,7 +19,7 @@
     </form>
 
     <script type="text/javascript">
-        let socket = io(`https://chat-gvn.herokuapp.com`);
+        let socket = io('localhost:9090');
 
         function renderMessage(message) {
             $('.messages').append('<div class="message"><strong>'+ message.author +'</strong>:'+ message.message +'</div>');
